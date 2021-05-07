@@ -8,7 +8,7 @@ module.exports = {
     app: Path.resolve(__dirname, '../src/scripts/index.js'),
   },
   output: {
-    path: Path.join(__dirname, '../build'),
+    path: Path.join(__dirname, '../docs'),
     filename: 'js/[name].js',
   },
   optimization: {
@@ -41,9 +41,9 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[path][name].[ext]',
-            outputPath: "images",
-            publicPath: 'images',
+            name: '[name].[ext]',
+            outputPath: 'images',
+            publicPath: '../',
           },
         },
       },
